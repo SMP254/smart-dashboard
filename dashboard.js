@@ -1,0 +1,1 @@
+document.getElementById('content').innerText = 'Traffic data and smart suggestions will appear here.';
