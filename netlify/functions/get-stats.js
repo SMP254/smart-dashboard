@@ -2,16 +2,17 @@ const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
   const API_KEY = process.env.PLAUSIBLE_API_KEY;
-  const domain = "promopilot.netlify.app";
+  const domain = "duedatenow.online"; // ← Updated domain
 
   const headers = {
     Authorization: `Bearer ${API_KEY}`,
   };
 
   try {
-    const realtime = await fetch(`https://plausible.io/api/v1/stats/realtime/visitors?site_id=${domain}`, {
-      headers,
-    }).then((res) => res.json());
+    const realtime = await fetch(
+      `https://plausible.io/api/v1/stats/realtime/visitors?site_id=${domain}`,
+      { headers }
+    ).then((res) => res.json());
 
     return {
       statusCode: 200,
