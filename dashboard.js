@@ -22,3 +22,4 @@ async function fetchData() {
     document.getElementById("visitors").innerText = "N/A";
   }
 }
+
