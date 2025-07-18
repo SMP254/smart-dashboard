@@ -6,10 +6,10 @@ async function fetchData() {
     const domain = "promopilot.netlify.app";
 
     try {
-        const resRealtime = await fetch(`https://plausible.io/api/v1/stats/realtime/visitors?site_id=${domain}`, { headers });
-        const realtime = await resRealtime.json();
-        document.getElementById("visitors").innerText = realtime.results.visitors;
-
+        const resRealtime = await fetch("/.netlify/functions/get-stats");
+const realtime = await resRealtime.json();
+document.getElementById("visitors").innerText = realtime.results.visitors;
+        
         const resBreakdowns = await Promise.all([
             fetch(`https://plausible.io/api/v1/stats/breakdown?site_id=${domain}&period=day&property=event:page`, { headers }),
             fetch(`https://plausible.io/api/v1/stats/breakdown?site_id=${domain}&period=day&property=visit:source`, { headers }),
