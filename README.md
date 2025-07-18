@@ -1,3 +1,3 @@
-# Smart Dashboard
+# PromoPilot
 
-A simple traffic dashboard template.
+Smart web traffic dashboard powered by Plausible Analytics.

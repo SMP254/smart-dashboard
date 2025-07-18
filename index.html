@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Smart Dashboard</title>
+    <title>PromoPilot Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <script defer data-domain="promopilot.netlify.app" src="https://plausible.io/js/script.js"></script>
+    <script async defer data-domain="promopilot.netlify.app" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-    <h1>Welcome to Smart Dashboard</h1>
-    <div id="content"></div>
+    <h1>PromoPilot Dashboard</h1>
+    <div id="stats">
+        <p><strong>Current Visitors:</strong> <span id="visitors">Loading...</span></p>
+        <p><strong>Top Pages:</strong></p>
+        <ul id="top-pages"></ul>
+        <p><strong>Traffic Sources:</strong></p>
+        <ul id="sources"></ul>
+        <p><strong>Devices:</strong></p>
+        <ul id="devices"></ul>
+        <p><strong>Countries:</strong></p>
+        <ul id="countries"></ul>
+    </div>
+    <div id="suggestions">
+        <h2>Smart Suggestions</h2>
+        <ul id="tips"></ul>
+    </div>
     <script src="dashboard.js"></script>
 </body>
 </html>
